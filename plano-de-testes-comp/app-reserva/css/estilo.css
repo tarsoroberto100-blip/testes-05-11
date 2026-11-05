@@ -1,0 +1,221 @@
+:root {
+  --fundo: #f5f1e8;
+  --painel: #fffdf8;
+  --borda: #e2d9c6;
+  --texto: #2b2620;
+  --suave: #6b6153;
+  --destaque: #2f5d50;
+  --destaque-claro: #e3efe9;
+  --erro: #a33b2b;
+  --erro-claro: #f8e4df;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 18px 32px;
+  background: var(--destaque);
+  color: #fdfaf3;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-right: 12px;
+}
+
+.slogan {
+  opacity: 0.85;
+}
+
+.layout {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.painel {
+  background: var(--painel);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 16px 0 8px;
+}
+
+.campos,
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+}
+
+label {
+  color: var(--suave);
+  font-size: 0.95rem;
+}
+
+input,
+select {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: #fff;
+  min-width: 180px;
+}
+
+input:focus,
+select:focus,
+button:focus-visible {
+  outline: 2px solid var(--destaque);
+  outline-offset: 2px;
+}
+
+.botao,
+.botao-secundario {
+  font: inherit;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.botao {
+  background: var(--destaque);
+  color: #fdfaf3;
+  border: 1px solid var(--destaque);
+}
+
+.botao:disabled {
+  background: #c9c2b4;
+  border-color: #c9c2b4;
+  color: #5d564a;
+  cursor: not-allowed;
+}
+
+.botao-secundario {
+  background: transparent;
+  color: var(--destaque);
+  border: 1px solid var(--destaque);
+}
+
+.mensagem {
+  min-height: 1.4em;
+  margin: 10px 0 0;
+}
+
+.mensagem.ok {
+  color: var(--destaque);
+}
+
+.mensagem.erro {
+  color: var(--erro);
+}
+
+.cabecalho-conta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resumo {
+  color: var(--suave);
+}
+
+.multa {
+  background: var(--erro-claro);
+  color: var(--erro);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.itens {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.itens li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--borda);
+}
+
+.livros {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.livro {
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #fff;
+}
+
+.livro h3 {
+  margin: 0;
+}
+
+.info {
+  color: var(--suave);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.situacao {
+  margin: 4px 0 8px;
+  font-weight: 700;
+}
+
+.livro .botao {
+  align-self: flex-start;
+}
+
+.bibliotecario summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.acoes-bib {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}

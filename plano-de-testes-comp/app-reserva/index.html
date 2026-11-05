@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ler+ — Reserva de livros da Biblioteca Municipal</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <div>
+      <span class="logo">Ler+</span>
+      <span class="slogan">Biblioteca Municipal · reserva de livros</span>
+    </div>
+    <div class="hoje">Hoje: <strong id="hoje"></strong></div>
+  </header>
+
+  <main class="layout">
+    <section class="painel" id="areaLogin">
+      <h2>Entrar</h2>
+      <div class="campos">
+        <label for="matricula">Matrícula da carteirinha</label>
+        <input type="text" id="matricula" placeholder="6 números" autocomplete="off">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" autocomplete="off">
+        <button type="button" id="entrar" class="botao">Entrar</button>
+      </div>
+      <p id="msgLogin" class="mensagem" role="alert"></p>
+    </section>
+
+    <section class="painel" id="areaConta" hidden>
+      <div class="cabecalho-conta">
+        <h2 id="saudacao"></h2>
+        <button type="button" id="sair" class="botao-secundario">Sair</button>
+      </div>
+      <p id="resumoConta" class="resumo"></p>
+      <p id="multa" class="multa" hidden></p>
+      <ul id="itensConta" class="itens"></ul>
+    </section>
+
+    <section class="painel catalogo">
+      <h2>Catálogo</h2>
+      <div class="filtros">
+        <label for="busca">Buscar por título ou autor</label>
+        <input type="search" id="busca" autocomplete="off">
+        <label for="genero">Gênero</label>
+        <select id="genero">
+          <option value="">Todos</option>
+        </select>
+      </div>
+      <p id="msgCatalogo" class="mensagem" role="alert"></p>
+      <div id="livros" class="livros"></div>
+    </section>
+
+    <details class="painel bibliotecario">
+      <summary>Painel do bibliotecário</summary>
+      <div class="acoes-bib">
+        <button type="button" id="avancarDia" class="botao-secundario">Avançar 1 dia</button>
+        <button type="button" id="pagarMulta" class="botao-secundario">Registrar pagamento de multa</button>
+        <button type="button" id="reiniciar" class="botao-secundario">Reiniciar todos os dados</button>
+      </div>
+      <h3>Pedidos do leitor conectado</h3>
+      <ul id="pedidosBib" class="itens"></ul>
+      <h3>Devolução feita por outro leitor</h3>
+      <div class="filtros">
+        <label for="livroOutro">Livro devolvido</label>
+        <select id="livroOutro"></select>
+        <button type="button" id="devolucaoOutro" class="botao-secundario">Registrar devolução</button>
+      </div>
+      <p id="msgBib" class="mensagem" role="alert"></p>
+    </details>
+  </main>
+
+  <script src="js/dados.js"></script>
+  <script src="js/regras.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
