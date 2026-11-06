@@ -14,9 +14,11 @@ Você faz parte do time de teste. Sua missão:
 lermais-testes/
 ├── README.md                          ← este arquivo
 ├── REQUISITOS-LerMais.md              ← documento oficial: a fonte da verdade
+├── DEPURACAO-passo-a-passo.md         ← guia da aula de depuração (06/11)
 ├── app/                               ← o Ler+ versão 1.1 (abra app/index.html)
 ├── modelos/
-│   └── RELATORIO-EXECUCAO-modelo.md   ← modelo do relatório de execução
+│   ├── RELATORIO-EXECUCAO-modelo.md   ← modelo do relatório de execução
+│   └── DEPURACAO-modelo.md            ← modelo do registro de depuração (06/11)
 ├── entregas/                          ← seu relatório final vai aqui
 └── .github/ISSUE_TEMPLATE/            ← modelo do relatório de defeito (Issue)
 ```
@@ -83,6 +85,31 @@ A etiqueta `bug` já existe por padrão.
    git commit -m "docs: relatorio de execucao LerMais"
    git push
    ```
+
+## Aula 2 (06/11) — Depuração: da Issue à correção
+
+Hoje você acha a **causa** de cada defeito no código, corrige e fecha a Issue. O guia completo, com os 3 bugs guiados, está em [`DEPURACAO-passo-a-passo.md`](DEPURACAO-passo-a-passo.md).
+
+**Seu repositório foi criado antes destes arquivos?** Não precisa criar outro:
+
+1. Leia o guia direto aqui, no repositório modelo.
+2. Abra `modelos/DEPURACAO-modelo.md` aqui no repositório modelo e clique no botão **Copy raw file** (ícone de copiar, acima do texto).
+3. No VS Code, no **seu** repositório, crie o arquivo `entregas/DEPURACAO-LerMais.md` e cole.
+
+**Resumo do dia:**
+
+1. Ferramenta: DevTools (F12) → aba **Sources** → Ctrl + P → `regras.js` → clique no número da linha.
+2. Depure os 3 bugs guiados: multa no último dia, limite de 3 livros e renovação dupla.
+3. Corrija, salve, clique em **Reiniciar todos os dados** e refaça os passos da Issue.
+4. Um commit por bug: `git commit -m "fix: descricao curta (closes #N)"` e `git push`.
+5. Preencha `entregas/DEPURACAO-LerMais.md`.
+
+**Checklist da Aula 2:**
+
+- [ ] 3 bugs guiados corrigidos, cada um com o seu commit `closes #N`
+- [ ] As Issues corrigidas aparecem como **Closed** no GitHub
+- [ ] `entregas/DEPURACAO-LerMais.md` com as 3 fichas e os prints do DevTools
+- [ ] Desafio (opcional): mais bugs corrigidos
 
 ## Severidade
 
